@@ -26,9 +26,11 @@ let distortionNode, delayNode, lowpassNode, highpassNode, gainNode;
 
 function preload() {
   audioFile = loadSound('sounds/02ContortYourself.mp3', onAudioLoaded, onAudioLoadError);
+  console.log("1");
 }
 
 function onAudioLoaded() {
+  console.log("2");
   // Create a new AudioContext object
   audioContext = new AudioContext();
 
