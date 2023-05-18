@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="libraries/p5.js"></script>
+    <script src="libraries/p5.sound.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+<script src="sketch.js"></script>
+  </head>
+    <body>
+    <h1>Select a song to use:</h1>
+    <ul>
+      <li><a href="#" onclick="setSong('sounds/02ContortYourself.mp3')">02ContortYourself</a></li>
+      <li><a href="#" onclick="setSong('sounds/03YouGotMe.mp3')">03YouGotMe</a></li>
+      <!-- add more songs here -->
+    </ul>
+    <input type="file" id="audio-file" accept=".mp3" style="display: none;">
+    <button onclick="document.getElementById('audio-file').click()">Choose a file</button>
+    <br><br>
+    <button onclick="debugSketch()">Debug Sketch</button>
+    <div id="download"></div>
+    <button id="play-btn">Play</button>
+    <button id="stop-btn">Stop</button>
+  </body>
+  <script>
+    function setSong(songFile) {
+      localStorage.setItem('songFile', songFile);
+    }
+
+    function debugSketch() {
+      let songFile = localStorage.getItem('songFile');
+      if (songFile) {
+        let script = document.createElement('script');
+        script.src = 'sketch.js';
+        document.head.appendChild(script);
+      } else {
+        alert('Please select a song first.');
+      }
+    }
+  </script>
+</html>
