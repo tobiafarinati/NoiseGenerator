@@ -9,12 +9,16 @@ let patterns = [];
 let audioContext;
 
 function preload() {
-  let songFile = localStorage.getItem('songFile');
-  if (songFile) {
-    audioFile = loadSound(songFile, onAudioLoaded);
-  } else {
-    alert('Please select a song first.');
-  }
+  let audioFiles = ['sounds/02ContortYourself.mp3', 'sounds/03YouGotMe.mp3'];
+  
+  // Select a random audio file from the list
+  let randomIndex = Math.floor(Math.random() * audioFiles.length);
+  let randomAudioFile = audioFiles[randomIndex];
+  
+  // Load the selected audio file
+  audioFile = loadSound(randomAudioFile, onAudioLoaded);
+  //set the length randomly
+  segmentLength = (random(20, 300))
 }
 
 function onAudioLoaded() {
@@ -87,7 +91,7 @@ outputSource = new AudioBufferSourceNode(audioContext, { buffer: outputBuffer })
   let link = document.createElement('a');
   link.href = url;
   link.download = 'output.wav';
-  link.innerHTML = 'Download WAV file';
+  link.innerHTML = ' here';
   document.body.appendChild(link);
 
   // Insert the download link into the placeholder element in the HTML file

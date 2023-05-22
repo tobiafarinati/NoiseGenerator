@@ -1,7 +1,139 @@
 html, body {
   margin: 0;
-  padding: 0;
+  padding: 0.5em;
+  font-family: Helvetica, sans-serif;
 }
 canvas {
   display: block;
+}
+/*columns suddivision*/
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 100%;
+  flex-direction: row;
+  border: 1px solid black;
+  margin-top: 50px;
+  margin-right: 10px;
+  padding-right: 10px;
+  padding-left: 10px;;
+}
+
+.column:first-child {
+  flex: 100%;
+  flex-direction: row;
+  border: 0px;
+  margin-top: 50px;
+  margin-right: 10px;
+}
+
+/*div {
+  margin-right: 33%;
+}*/
+
+/*header*/
+.headerActive1 {
+  mix-blend-mode: difference;
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  position: fixed;
+  top: 0.5em;
+  width: 100%;
+}
+
+.headerInactive1 {
+  -webkit-text-stroke: 1px white;
+  mix-blend-mode: difference;
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  position: fixed;
+  top: 0.5em;
+  left: 240px;
+  width: 100%;
+}
+
+.headerInactive1:hover {
+  -webkit-text-stroke: 0px white;
+  color: white;
+}
+
+.headerActive2 {
+  mix-blend-mode: difference;
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  position: fixed;
+  left: 240px;
+  top: 0.5em;
+  width: 100%;
+}
+
+.headerInactive2 {
+  -webkit-text-stroke: 1px white;
+  mix-blend-mode: difference;
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  position: fixed;
+  top: 0.5em;
+  width: 100%;
+}
+
+.headerInactive2:hover {
+  -webkit-text-stroke: 0px white;
+  color: white;
+}
+
+/*body*/
+.title {
+  font-size: 100px;
+  line-height: 30%;
+}
+
+h1 {
+  font-size: 25px;
+  font-weight: normal;
+  line-height: 28px;
+}
+
+h2 {
+  font-size: 25px;
+  text-transform: uppercase;
+  line-height: 28px;
+}
+
+p {
+  font-size: 25px;
+  line-height: 28px;
+}
+
+/*buttons*/
+.button {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 15px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: solid black;
+  border: 1px solid black;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 15px;
+  margin: 4px 2px;
+  cursor: pointer;
 }
