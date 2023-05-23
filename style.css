@@ -1,42 +1,47 @@
 html, body {
   margin: 0;
-  padding: 0.5em;
+  padding: 1em;
   font-family: Helvetica, sans-serif;
 }
-canvas {
-  display: block;
-}
-/*columns suddivision*/
-.row {
-  display: flex;
+
+/*responsive columns suddivision
+* {
+  box-sizing: border-box;
 }
 
-.column {
-  flex: 100%;
-  flex-direction: row;
-  border: 1px solid black;
-  margin-top: 50px;
-  margin-right: 10px;
-  padding-right: 10px;
-  padding-left: 10px;;
+
+/* Create two equal columns that floats next to each other
+.column1 {
+  float: left;
+  width: 33,3%;
+  padding-top: 40px;
 }
 
-.column:first-child {
-  flex: 100%;
-  flex-direction: row;
-  border: 0px;
-  margin-top: 50px;
-  margin-right: 10px;
+.image {
+  float: left;
+  width: fit-content;
+  height: auto;
 }
 
-/*div {
-  margin-right: 33%;
-}*/
+/* Clear floats after the columns
+.row1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other
+@media screen and (max-width: 750px) {
+  .column1 {
+    width: 100%;
+  }
+}
+*/
 
 /*header*/
 .headerActive1 {
   mix-blend-mode: difference;
-  font-size: 25px;
+  font-size: 35px;
   font-weight: bold;
   text-decoration: none;
   color: white;
@@ -48,13 +53,13 @@ canvas {
 .headerInactive1 {
   -webkit-text-stroke: 1px white;
   mix-blend-mode: difference;
-  font-size: 25px;
+  font-size: 35px;
   font-weight: bold;
   text-decoration: none;
   color: black;
   position: fixed;
   top: 0.5em;
-  left: 240px;
+  left: 320px;
   width: 100%;
 }
 
@@ -65,12 +70,12 @@ canvas {
 
 .headerActive2 {
   mix-blend-mode: difference;
-  font-size: 25px;
+  font-size: 35px;
   font-weight: bold;
   text-decoration: none;
   color: white;
   position: fixed;
-  left: 240px;
+  left: 320px;
   top: 0.5em;
   width: 100%;
 }
@@ -78,7 +83,7 @@ canvas {
 .headerInactive2 {
   -webkit-text-stroke: 1px white;
   mix-blend-mode: difference;
-  font-size: 25px;
+  font-size: 35px;
   font-weight: bold;
   text-decoration: none;
   color: black;
@@ -99,13 +104,14 @@ canvas {
 }
 
 h1 {
-  font-size: 25px;
+  font-size: 40px;
   font-weight: normal;
-  line-height: 28px;
+  line-height: 44px;
 }
 
 h2 {
   font-size: 25px;
+  text-align: left;
   text-transform: uppercase;
   line-height: 28px;
 }
@@ -118,7 +124,8 @@ p {
 /*buttons*/
 .button {
   background-color: white;
-  border: 1px solid black;
+  border: 1.5px solid black;
+  text-decoration: none;
   color: black;
   padding: 10px 20px;
   text-align: center;
@@ -128,12 +135,147 @@ p {
 }
 
 .button:hover {
-  background-color: solid black;
-  border: 1px solid black;
-  color: black;
+  background-color: black;
+  border: 1.5px solid black;
+  text-decoration: none;
+  color: white;
   padding: 10px 20px;
   text-align: center;
   font-size: 15px;
   margin: 4px 2px;
   cursor: pointer;
+}
+
+/*image grid*/
+.gallery {
+  float: left;
+  width: 200px;
+  height: 320px;
+  padding-top: 3em;
+  padding-right: 4em;
+}
+
+.gallery img {
+  margin-left: -40px;
+  filter: grayscale(100%);
+  width: 200px;
+  height: auto;
+}
+
+.gallery img:hover {
+  filter: none;
+  filter: grayscale(0%);
+  width: 200px;
+  height: auto;
+}
+
+.desc {
+  padding-top: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+}
+
+
+/*index.html boxes*/
+.box1 {
+  padding-top: 10px;
+  width: 70%;
+  margin-top: 30px;
+}
+
+#box2{
+  width: 40%;
+  margin-top: -4px;
+  margin-left: +2px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  padding-right: 20px;
+  border: 1.5px solid black;
+}
+
+.buttonGen {
+  margin-top: 30px;
+  padding-top: 0px;
+  padding-left: 20px;
+  padding-bottom: 0px;
+  padding-right: 20px;
+  background: white;
+  border: 1.5px solid black;
+  color: black;
+  font-size: 25px;
+  line-height: 28px;
+  text-align: left;
+}
+
+.buttonGen:hover {
+  margin-top: 30px;
+  padding-top: 0px;
+  padding-left: 20px;
+  padding-bottom: 0px;
+  padding-right: 20px;
+  background: black;
+  border: 1.5px solid black;
+  color: white;
+  font-size: 25px;
+  line-height: 28px;
+  text-align: left;
+}
+
+@media screen and (max-width: 900px) {
+  .box1 {
+    width: 100%;
+  }
+  #box2 {
+    width: 100%;
+  }
+
+  .buttonGen {
+    text-align: left;
+  }
+
+  .buttonGen:hover {
+    text-align: center;
+  }
+}
+
+
+/*archivio*/
+gallery {
+  border: 1px solid #ccc;
+}
+
+
+gallery img {
+  width: 100%;
+  height: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
 }
