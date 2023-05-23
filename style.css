@@ -1,16 +1,17 @@
 html, body {
-  margin: 0;
-  padding: 1em;
-  font-family: Helvetica, sans-serif;
+  margin: 10px;
+  padding: 0.5em;
 }
 
-/*responsive columns suddivision
+
 * {
   box-sizing: border-box;
+  font-family: Helvetica;
 }
 
+/*responsive columns suddivision*/
 
-/* Create two equal columns that floats next to each other
+/* Create two equal columns that floats next to each other*/
 .column1 {
   float: left;
   width: 33,3%;
@@ -23,7 +24,7 @@ html, body {
   height: auto;
 }
 
-/* Clear floats after the columns
+/* Clear floats after the columns*/
 .row1:after {
   content: "";
   display: table;
@@ -36,30 +37,29 @@ html, body {
     width: 100%;
   }
 }
-*/
 
 /*header*/
 .headerActive1 {
+  color: white;
   mix-blend-mode: difference;
-  font-size: 35px;
+  font-size: 40px;
   font-weight: bold;
   text-decoration: none;
-  color: white;
-  position: fixed;
+  position: sticky;
   top: 0.5em;
   width: 100%;
 }
 
 .headerInactive1 {
   -webkit-text-stroke: 1px white;
+  color: black;
   mix-blend-mode: difference;
-  font-size: 35px;
+  font-size: 40px;
   font-weight: bold;
   text-decoration: none;
-  color: black;
-  position: fixed;
+  position: sticky;
   top: 0.5em;
-  left: 320px;
+  left: 380px;
   width: 100%;
 }
 
@@ -69,24 +69,24 @@ html, body {
 }
 
 .headerActive2 {
+  color: white;
   mix-blend-mode: difference;
-  font-size: 35px;
+  font-size: 40px;
   font-weight: bold;
   text-decoration: none;
-  color: white;
   position: fixed;
-  left: 320px;
+  left: 380px;
   top: 0.5em;
   width: 100%;
 }
 
 .headerInactive2 {
   -webkit-text-stroke: 1px white;
+  color: black;
   mix-blend-mode: difference;
-  font-size: 35px;
+  font-size: 40px;
   font-weight: bold;
   text-decoration: none;
-  color: black;
   position: fixed;
   top: 0.5em;
   width: 100%;
@@ -106,14 +106,14 @@ html, body {
 h1 {
   font-size: 40px;
   font-weight: normal;
-  line-height: 44px;
+  line-height: 43px;
 }
 
 h2 {
   font-size: 25px;
   text-align: left;
-  text-transform: uppercase;
   line-height: 28px;
+  font-weight: normal;
 }
 
 p {
@@ -130,7 +130,7 @@ p {
   padding: 10px 20px;
   text-align: center;
   font-size: 15px;
-  margin: 4px 2px;
+  
   cursor: pointer;
 }
 
@@ -142,40 +142,8 @@ p {
   padding: 10px 20px;
   text-align: center;
   font-size: 15px;
-  margin: 4px 2px;
   cursor: pointer;
 }
-
-/*image grid*/
-.gallery {
-  float: left;
-  width: 200px;
-  height: 320px;
-  padding-top: 3em;
-  padding-right: 4em;
-}
-
-.gallery img {
-  margin-left: -40px;
-  filter: grayscale(100%);
-  width: 200px;
-  height: auto;
-}
-
-.gallery img:hover {
-  filter: none;
-  filter: grayscale(0%);
-  width: 200px;
-  height: auto;
-}
-
-.desc {
-  padding-top: 0px;
-  padding-left: 10px;
-  padding-right: 10px;
-  text-align: center;
-}
-
 
 /*index.html boxes*/
 .box1 {
@@ -184,10 +152,9 @@ p {
   margin-top: 30px;
 }
 
-#box2{
-  width: 40%;
-  margin-top: -4px;
-  margin-left: +2px;
+#box2 {
+  width: 70%;
+  margin-top: -1.5px;
   padding-left: 20px;
   padding-bottom: 20px;
   padding-right: 20px;
@@ -222,7 +189,66 @@ p {
   text-align: left;
 }
 
-@media screen and (max-width: 900px) {
+/*archivio*/
+div.gallery {
+  margin-top: 40px;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+  padding-right: 20px;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 768px) {
+  div.gallery img {
+    padding-right: 20px;
+  }
+  
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  div.gallery img {
+    padding-right: 0px;
+  }
+
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+
+
+/*makes things responsive*/
+/* Medium (tablet, 768px and down) */
+@media only screen and (max-width: 768px) {
   .box1 {
     width: 100%;
   }
@@ -237,45 +263,57 @@ p {
   .buttonGen:hover {
     text-align: center;
   }
+
+
 }
 
-
-/*archivio*/
-gallery {
-  border: 1px solid #ccc;
-}
-
-
-gallery img {
-  width: 100%;
-  height: auto;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-.responsive {
-  padding: 0 6px;
-  float: left;
-  width: 24.99999%;
-}
-
-@media only screen and (max-width: 700px) {
-  .responsive {
-    width: 49.99999%;
-    margin: 6px 0;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .responsive {
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .box1 {
     width: 100%;
   }
-}
+  #box2 {
+    width: 100%;
+  }
 
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
+  .buttonGen {
+    text-align: left;
+  }
+
+  .buttonGen:hover {
+    text-align: center;
+  }
+
+  .headerActive1 {
+    font-size: 30px;
+  }
+
+  .headerInactive1 {
+    font-size: 30px;
+    left: 290px;
+  }
+
+  .headerActive2 {
+    font-size: 30px;
+    left: 290px;
+  }
+
+  .headerInactive2 {
+    font-size: 30px;
+  }
+
+  h1 {
+    font-size: 30px;
+    line-height: 33px;
+  }
+
+  h2 {
+    font-size: 17px;
+    line-height: 19.5px;
+  }
+
+  p {
+    font-size: 17px;
+    line-height: 19.5px;
+  }
 }
