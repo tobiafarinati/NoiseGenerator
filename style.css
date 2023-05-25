@@ -1,6 +1,5 @@
 html, body {
-  margin: 10px;
-  padding: 0.2em;
+  padding: 0.1em;
 }
 
 
@@ -10,180 +9,127 @@ html, body {
 }
 
 /*header*/
+.test {
+  flex-direction: column;
+  display: flex;
+}
+
 .headerActive1 {
-  color: white;
-  mix-blend-mode: difference;
-  font-size: 40px;
+  color: #000000;
+  font-size: 1.4em;
+  line-height: 1.3;
   font-weight: bold;
   text-decoration: none;
   position: sticky;
-
-  width: 100%;
 }
 
 .headerInactive1 {
-  -webkit-text-stroke: 1px white;
   color: black;
-  mix-blend-mode: difference;
-  font-size: 40px;
-  font-weight: bold;
+  font-size: 1.4em;
+  line-height: 1.3;
+  font-weight: normal;
   text-decoration: none;
   position: sticky;
-
-  left: 380px;
-  width: 100%;
 }
 
 .headerInactive1:hover {
-  -webkit-text-stroke: 0px white;
-  color: white;
+ font-weight: bold;
 }
 
 .headerActive2 {
   color: white;
-  mix-blend-mode: difference;
-  font-size: 40px;
+  font-size: 1.4em;
+  line-height: 1.3;
   font-weight: bold;
   text-decoration: none;
-  position: fixed;
-  left: 380px;
-  
-  width: 100%;
+  position: sticky;
 }
 
 .headerInactive2 {
-  -webkit-text-stroke: 1px white;
-  color: black;
-  mix-blend-mode: difference;
-  font-size: 40px;
-  font-weight: bold;
+  color: white;
+  font-size: 1.4em;
+  line-height: 1.3;
+  font-weight: normal;
   text-decoration: none;
-  position: fixed;
-
-  width: 100%;
+  position: sticky;
 }
 
 .headerInactive2:hover {
-  -webkit-text-stroke: 0px white;
-  color: white;
+ font-weight: bold;
 }
 
 /*body*/
-.title {
-  font-size: 100px;
-  line-height: 30%;
+span {
+  color: grey;
+  font-size: 0.9em;
+  line-height: 1.3;
+}
+
+
+/*
+a {
+  font-size: 0.9em;
+  line-height: 1;
+  font-weight: normal;
+  color: black;
+  text-decoration: underline;
+  display: inline;
+}
+
+a:hover {
+  font-size: 0.9em;
+  line-height: 1;
+  font-weight: bold;
+  text-decoration: underline;
+}
+*/
+
+a {
+  color: black;
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 25px;
+  text-align: left;
+  line-height: 28px;
   font-weight: normal;
-  line-height: 43px;
 }
 
 h2 {
-  font-size: 25px;
-  text-align: left;
-  line-height: 28px;
+  font-size: 0.9em;
+  line-height: 1.3;
+}
+
+h3 {
+  font-size: 0.9em;
+  line-height: 1;
   font-weight: normal;
+  color: black;
+  text-decoration: underline;
+  display: inline;
+  cursor: pointer;
+}
+
+h3:hover {
+  font-size: 0.9em;
+  line-height: 1;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 p {
-  font-size: 25px;
-  line-height: 28px;
+  font-size: 0.9em;
+  line-height: 1.3;
 }
 
-.pBold {
-  font-size: 25px;
-  line-height: 28px;
-  font-weight: bold;
-}
-
-.pSmall {
-  font-size: 15px;
-  line-height: 18px;
-}
-
-/*buttons*/
-.button {
-  background-color: white;
-  border: 1.5px solid black;
-  text-decoration: none;
-  color: black;
-  padding: 10px 20px;
-  text-align: center;
-  font-size: 15px;
-  
-  cursor: pointer;
-}
-
-.button:hover {
-  background-color: black;
-  border: 1.5px solid black;
-  text-decoration: none;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  font-size: 15px;
-  cursor: pointer;
-}
 
 /*index.html boxes*/
-.box1 {
-  padding-top: 10px;
-  width: 74%;
-  margin-top: 0px;
-}
-
 #box2 {
-  width: 60%;
-  margin-top: -1.5px;
-  padding-left: 20px;
-  padding-bottom: 20px;
-  padding-right: 20px;
-  border: 1.5px solid black;
+  margin-top: -10px;
+  width: fit-content;
 }
 
-.box3 {
-  border-bottom: 1.5px solid black;
-  
-}
-
-.box4 {
-  height: 140px;
-  overflow: auto;
-}
-
-
-
-.buttonGen {
-  margin-top: 20px;
-  padding-top: 0px;
-  padding-left: 20px;
-  padding-bottom: 0px;
-  padding-right: 20px;
-  background: white;
-  border: 1.5px solid black;
-  color: black;
-  font-size: 25px;
-  line-height: 28px;
-  text-align: left;
-}
-
-.buttonGen:hover {
-  margin-top: 20px;
-  padding-top: 0px;
-  padding-left: 20px;
-  padding-bottom: 0px;
-  padding-right: 20px;
-  background: black;
-  border: 1.5px solid black;
-  color: white;
-  font-size: 25px;
-  line-height: 28px;
-  text-align: left;
-}
-
-/*GRIGLIA*/
+/*GRIGLIA IMMAGINI*/
 .grid-container {
   display: inline-grid;
   grid: auto / 22% 22% 22% 22%;
@@ -210,6 +156,28 @@ p {
   -webkit-filter: none;
 }
 
+
+/*GRIGLIA INDEX*/
+.grid-container1 {
+  padding-top: 1em;
+  display: inline-grid;
+  grid: auto / 22% 22% 22% 22%;
+  grid-column-gap: 4%;
+  grid-row-gap: 4%;
+  width: 100%;
+}
+
+.grid-container1 > .grid-item1{
+  column-gap: 25px;
+  row-gap: 25px;
+}
+
+.grid-item1 {
+  margin: 0px;
+  width: 100%;
+}
+
+
 /*audio control*/
 audio::-webkit-media-controls-panel {
   background-color: white;
@@ -235,7 +203,7 @@ background-color: white;
 
 /*makes things responsive*/
 /* Medium (tablet, 768px and down) */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 900px) {
   .grid-container {
     display: inline-grid;
     grid: auto / 47.5% 47.5%;
@@ -244,26 +212,17 @@ background-color: white;
     width: 100%;
   }
 
-  .box1 {
+  .grid-container1 {
+    display: inline-grid;
+    grid: auto / 47.5% 47.5%;
+    grid-column-gap: 5%;
+    grid-row-gap: 5%;
     width: 100%;
   }
-  #box2 {
-    width: 100%;
-  }
-
-  .buttonGen {
-    text-align: left;
-  }
-
-  .buttonGen:hover {
-    text-align: center;
-  }
-
-
 }
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
   .grid-container {
     display: inline-grid;
     grid: auto / 100%;
@@ -272,62 +231,11 @@ background-color: white;
     width: 100%;
   }
 
-  .box1 {
+  .grid-container1 {
+    display: inline-grid;
+    grid: auto / 100%;
+    grid-column-gap: 0%;
+    grid-row-gap: 5%;
     width: 100%;
-  }
-  #box2 {
-    width: 100%;
-  }
-
-  .buttonGen {
-    text-align: left;
-  }
-
-  .buttonGen:hover {
-    text-align: center;
-  }
-
-  .headerActive1 {
-    font-size: 30px;
-  }
-
-  .headerInactive1 {
-    font-size: 30px;
-    left: 290px;
-  }
-
-  .headerActive2 {
-    font-size: 30px;
-    left: 290px;
-  }
-
-  .headerInactive2 {
-    font-size: 30px;
-  }
-
-  h1 {
-    font-size: 30px;
-    line-height: 33px;
-  }
-
-  h2 {
-    font-size: 17px;
-    line-height: 19.5px;
-  }
-
-  p {
-    font-size: 17px;
-    line-height: 19.5px;
-  }
-
-  .pBold {
-    font-size: 17px;
-    line-height: 19.5px;
-    font-weight: bold;
-  }
-  
-  .pSmall {
-    font-size: 15px;
-    line-height: 18px;
   }
 }
