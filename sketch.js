@@ -9,7 +9,7 @@ let patterns = [];
 let audioContext;
 
 function preload() {
-  let audioFiles = ['sounds/02ContortYourself.mp3', 'sounds/03YouGotMe.mp3'];
+  let audioFiles = ['song/02ContortYourself.mp3', 'song/03YouGotMe.mp3'];
   
   // Select a random audio file from the list
   let randomIndex = Math.floor(Math.random() * audioFiles.length);
@@ -17,8 +17,12 @@ function preload() {
   
   // Load the selected audio file
   audioFile = loadSound(randomAudioFile, onAudioLoaded);
+  console.log(audioFile);
+  document.getElementById("inputSongValue").innerHTML = randomAudioFile;
   //set the length randomly
-  segmentLength = (random(20, 300))
+  segmentLength = Math.floor(Math.random() * 280) + 20;
+  console.log(segmentLength);
+  document.getElementById("segmentLengthValue").innerHTML = segmentLength;
 }
 
 function onAudioLoaded() {
@@ -41,6 +45,7 @@ function onAudioLoaded() {
     segments.push(segment);
     
     // Print the length of the segment in milliseconds
+    document.getElementById("segmentsValue").innerHTML = i;
     console.log(`Segment ${i}: ${segmentLength}ms`);
   }
   
@@ -93,6 +98,8 @@ outputSource = new AudioBufferSourceNode(audioContext, { buffer: outputBuffer })
   link.download = 'output.wav';
   link.innerHTML = ' here';
   document.body.appendChild(link);
+  //document.getElementById("DownloadValue").innerHTML = link;
+  console.log(link);
 
   // Insert the download link into the placeholder element in the HTML file
   let downloadDiv = document.getElementById('download');

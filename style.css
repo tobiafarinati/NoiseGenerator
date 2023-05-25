@@ -1,41 +1,12 @@
 html, body {
   margin: 10px;
-  padding: 0.5em;
+  padding: 0.2em;
 }
 
 
 * {
   box-sizing: border-box;
   font-family: Helvetica;
-}
-
-/*responsive columns suddivision*/
-
-/* Create two equal columns that floats next to each other*/
-.column1 {
-  float: left;
-  width: 33,3%;
-  padding-top: 40px;
-}
-
-.image {
-  float: left;
-  width: fit-content;
-  height: auto;
-}
-
-/* Clear floats after the columns*/
-.row1:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other
-@media screen and (max-width: 750px) {
-  .column1 {
-    width: 100%;
-  }
 }
 
 /*header*/
@@ -46,7 +17,7 @@ html, body {
   font-weight: bold;
   text-decoration: none;
   position: sticky;
-  top: 0.5em;
+
   width: 100%;
 }
 
@@ -58,7 +29,7 @@ html, body {
   font-weight: bold;
   text-decoration: none;
   position: sticky;
-  top: 0.5em;
+
   left: 380px;
   width: 100%;
 }
@@ -76,7 +47,7 @@ html, body {
   text-decoration: none;
   position: fixed;
   left: 380px;
-  top: 0.5em;
+  
   width: 100%;
 }
 
@@ -88,7 +59,7 @@ html, body {
   font-weight: bold;
   text-decoration: none;
   position: fixed;
-  top: 0.5em;
+
   width: 100%;
 }
 
@@ -121,6 +92,17 @@ p {
   line-height: 28px;
 }
 
+.pBold {
+  font-size: 25px;
+  line-height: 28px;
+  font-weight: bold;
+}
+
+.pSmall {
+  font-size: 15px;
+  line-height: 18px;
+}
+
 /*buttons*/
 .button {
   background-color: white;
@@ -148,12 +130,12 @@ p {
 /*index.html boxes*/
 .box1 {
   padding-top: 10px;
-  width: 70%;
-  margin-top: 30px;
+  width: 74%;
+  margin-top: 0px;
 }
 
 #box2 {
-  width: 70%;
+  width: 60%;
   margin-top: -1.5px;
   padding-left: 20px;
   padding-bottom: 20px;
@@ -161,8 +143,20 @@ p {
   border: 1.5px solid black;
 }
 
+.box3 {
+  border-bottom: 1.5px solid black;
+  
+}
+
+.box4 {
+  height: 140px;
+  overflow: auto;
+}
+
+
+
 .buttonGen {
-  margin-top: 30px;
+  margin-top: 20px;
   padding-top: 0px;
   padding-left: 20px;
   padding-bottom: 0px;
@@ -176,7 +170,7 @@ p {
 }
 
 .buttonGen:hover {
-  margin-top: 30px;
+  margin-top: 20px;
   padding-top: 0px;
   padding-left: 20px;
   padding-bottom: 0px;
@@ -189,66 +183,67 @@ p {
   text-align: left;
 }
 
-/*archivio*/
-div.gallery {
-  margin-top: 40px;
-}
-
-div.gallery img {
+/*GRIGLIA*/
+.grid-container {
+  display: inline-grid;
+  grid: auto / 22% 22% 22% 22%;
+  grid-column-gap: 4%;
+  grid-row-gap: 4%;
   width: 100%;
-  height: auto;
-  padding-right: 20px;
 }
 
-div.desc {
-  padding: 15px;
-  text-align: center;
+.grid-container > .grid-item{
+  column-gap: 25px;
+  row-gap: 25px;
+}
+.grid-item > figure {
+  margin: 0px;
 }
 
-* {
-  box-sizing: border-box;
+.grid-item > figure > img {
+  width: 100%;
+  -webkit-filter: grayscale(1);
 }
 
-.responsive {
-  padding: 0 6px;
-  float: left;
-  width: 24.99999%;
+.grid-item > figure > img:hover {
+  width: 100%;
+  -webkit-filter: none;
 }
 
-@media only screen and (max-width: 768px) {
-  div.gallery img {
-    padding-right: 20px;
-  }
-  
-  .responsive {
-    width: 49.99999%;
-    margin: 6px 0;
-  }
+/*audio control*/
+audio::-webkit-media-controls-panel {
+  background-color: white;
+  border-radius: 0%;
 }
 
-@media only screen and (max-width: 600px) {
-  div.gallery img {
-    padding-right: 0px;
-  }
-
-  .responsive {
-    width: 100%;
-  }
+audio::-webkit-media-controls-timeline {
+  border-radius: 25px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
+audio::-webkit-media-controls-play-button {
+  background-color: white;
+  border-radius: 50%;
+  margin-left: -20px;
 }
 
-
-
+audio::-webkit-media-controls-play-button:hover {
+background-color: white;
+}
 
 
 /*makes things responsive*/
 /* Medium (tablet, 768px and down) */
 @media only screen and (max-width: 768px) {
+  .grid-container {
+    display: inline-grid;
+    grid: auto / 47.5% 47.5%;
+    grid-column-gap: 5%;
+    grid-row-gap: 5%;
+    width: 100%;
+  }
+
   .box1 {
     width: 100%;
   }
@@ -269,6 +264,14 @@ div.desc {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+  .grid-container {
+    display: inline-grid;
+    grid: auto / 100%;
+    grid-column-gap: 0%;
+    grid-row-gap: 5%;
+    width: 100%;
+  }
+
   .box1 {
     width: 100%;
   }
@@ -315,5 +318,16 @@ div.desc {
   p {
     font-size: 17px;
     line-height: 19.5px;
+  }
+
+  .pBold {
+    font-size: 17px;
+    line-height: 19.5px;
+    font-weight: bold;
+  }
+  
+  .pSmall {
+    font-size: 15px;
+    line-height: 18px;
   }
 }
