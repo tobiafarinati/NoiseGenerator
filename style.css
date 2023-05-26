@@ -1,5 +1,5 @@
 html, body {
-  padding: 0.1em;
+  padding: 0.2em;
 }
 
 
@@ -16,19 +16,21 @@ html, body {
 
 .headerActive1 {
   color: #000000;
-  font-size: 1.4em;
+  font-size: 1.2em;
   line-height: 1.3;
   font-weight: bold;
   text-decoration: none;
+  text-decoration: underline;
   position: sticky;
 }
 
 .headerInactive1 {
   color: black;
-  font-size: 1.4em;
+  font-size: 1.2em;
   line-height: 1.3;
   font-weight: normal;
   text-decoration: none;
+  text-decoration: underline;
   position: sticky;
 }
 
@@ -38,19 +40,21 @@ html, body {
 
 .headerActive2 {
   color: white;
-  font-size: 1.4em;
+  font-size: 1.2em;
   line-height: 1.3;
   font-weight: bold;
   text-decoration: none;
+  text-decoration: underline;
   position: sticky;
 }
 
 .headerInactive2 {
   color: white;
-  font-size: 1.4em;
+  font-size: 1.2em;
   line-height: 1.3;
   font-weight: normal;
   text-decoration: none;
+  text-decoration: underline;
   position: sticky;
 }
 
@@ -65,27 +69,11 @@ span {
   line-height: 1.3;
 }
 
-
-/*
-a {
-  font-size: 0.9em;
-  line-height: 1;
-  font-weight: normal;
-  color: black;
-  text-decoration: underline;
-  display: inline;
-}
-
-a:hover {
-  font-size: 0.9em;
-  line-height: 1;
-  font-weight: bold;
-  text-decoration: underline;
-}
-*/
-
 a {
   color: black;
+  text-decoration: none;
+  font-size: 0.9em;
+  line-height: 1.3;
 }
 
 h1 {
@@ -122,11 +110,72 @@ p {
   line-height: 1.3;
 }
 
+.aLink{
+  font-size: 0.9em;
+  line-height: 1;
+  font-weight: normal;
+  color: black;
+  text-decoration: underline;
+  display: inline;
+  cursor: pointer;
+}
+
+.aLink:hover {
+  font-size: 0.9em;
+  line-height: 1;
+  font-weight: bold;
+  text-decoration: underline;
+}
 
 /*index.html boxes*/
-#box2 {
+#box1 {
   margin-top: -10px;
   width: fit-content;
+}
+
+/*AUDIO PLAYER*/
+audio {
+  width: 100%;
+  height: 20px;
+  margin-top: -5px;
+  margin-bottom: -6px;
+}
+
+audio::-webkit-media-controls-panel {
+background-color: white;
+padding-left: 0%;
+padding-right: 0%;
+}
+
+audio::-webkit-media-controls-timeline-container{
+  display: none !important;
+  
+}
+
+audio::-webkit-media-controls-timeline{
+  display: none !important;
+  margin-right: 100px;
+  padding-right: 50px;
+}
+
+audio::-webkit-media-controls-volume-slider-container {
+  display: none !important;
+}
+
+audio::-webkit-media-controls-volume-slider {
+  display: none !important;
+  margin-right: 100px;
+  padding-right: 50px;
+}
+
+audio::-webkit-media-controls-mute-button {
+  display: none !important;
+  margin-right: 100px;
+  padding-right: 50px;
+}
+
+audio::-webkit-media-controls-time-remaining-display {
+  display: none !important;
 }
 
 /*GRIGLIA IMMAGINI*/
@@ -177,33 +226,28 @@ p {
   width: 100%;
 }
 
-
-/*audio control*/
-audio::-webkit-media-controls-panel {
-  background-color: white;
-  border-radius: 0%;
+/*GRID INSIDE GRID*/
+.grid-container2 {
+  display: inline-grid;
+  grid: auto / 20% 80%;
+  grid-column-gap: 4%;
+  grid-row-gap: 4%;
+  width: 100%;
 }
 
-audio::-webkit-media-controls-timeline {
-  border-radius: 25px;
-  margin-left: 10px;
-  margin-right: 10px;
+.grid-container2 > .grid-item1{
+  column-gap: 25px;
+  row-gap: 25px;
 }
 
-audio::-webkit-media-controls-play-button {
-  background-color: white;
-  border-radius: 50%;
-  margin-left: -20px;
+.grid-item2 {
+  margin: 0px;
+  width: 100%;
 }
-
-audio::-webkit-media-controls-play-button:hover {
-background-color: white;
-}
-
 
 /*makes things responsive*/
 /* Medium (tablet, 768px and down) */
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1080px) {
   .grid-container {
     display: inline-grid;
     grid: auto / 47.5% 47.5%;

@@ -46,7 +46,7 @@ function onAudioLoaded() {
     
     // Print the length of the segment in milliseconds
     document.getElementById("segmentsValue").innerHTML = i;
-    console.log(`Segment ${i}: ${segmentLength}ms`);
+    //console.log(`Segment ${i}: ${segmentLength}ms`);
   }
   
   // Shuffle the segments array using the Fisher-Yates shuffle algorithm
