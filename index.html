@@ -13,7 +13,6 @@
     <script src="libraries/p5.js"></script>
     <script src="libraries/p5.sound.js"></script>
     <script src="sketch.js"></script>
-    
     <script src="script.js"></script>
   </head>
 
@@ -25,12 +24,15 @@
       <div class="grid-item1">
         <h2>Step 1 <br>About the project</h2>
         <p>The project aims on the one hand to investigate and make known the No Wave movement, and on the other hand to present a possible methodology of musical experimentation through the generation of sound fragments. The noise generator below is intended to stimulate curiosity about the movement by allowing you, first, to get to know the Dadaist musical approach used by the movement, and then, to deepen your knowledge through the archive of tracks to listen to. It is interesting to consider, in fact, that NoWave music at the time constituted an important piece in the history of punk music and musical experimentation, producing a unique and new sound compared to the parallel NewWave.</h1>
+          <div>
+            <a class="aLink" href="sketch.js">Download source code</a>
+          </div>
       </div>
 
       <div class="grid-item1">
         <h2>Step 2 <br>Generate you noise</h2>
         
-        <p class="pSmall">This is a noise generator, it will randomly chose a song from a list of No Wave songs, split it into segments of random length between 20 and 300 milliseconds and create a new output song. This is your sound of protest!</p>
+        <p>This is a noise generator, it will randomly chose a song from a list of No Wave songs, split it into segments of random length between 20 and 300 milliseconds and create a new output song. This is your sound of protest!</p>
 
         <div>
           <h3 id="play-btn">Play</h3>
@@ -42,7 +44,7 @@
           <h3>View generated song's specification</h3>
         </div>
 
-        <div id="box1" style="display:none">
+        <div style="display:none">
           <p>Selected song: <br><span id="inputSongValue"></span> 
           </br> Length of each segment (ms): <br><span id="segmentLengthValue"></span>
           </br> Number of segments: <br><span id="segmentsValue"></span></p>
@@ -61,6 +63,7 @@
             <a>MariaG:</a>
             <a>Alice:</a>
             <a>Fra:</a>
+            <a>Marina:</a>
           </div>
 
           <div class="grid-item2">
@@ -83,11 +86,15 @@
             <audio controls>
               <source src="database/5.wav" type="audio/wav">
             </audio>
+
+            <audio controls>
+              <source src="database/5.wav" type="audio/wav">
+            </audio>
           </div>
         </div>
         
         <div class="test">
-          <h3 title="attach file" onclick="document.getElementById('myInput').click()">+ upload your noise</h3>
+          <h3 title="attach file" onclick="document.getElementById('myInput').click()">+ Upload your noise</h3>
           <input id="myInput" type="file" style="visibility:hidden"/>
         </div>
 

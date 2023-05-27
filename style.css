@@ -62,7 +62,7 @@ html, body {
  font-weight: bold;
 }
 
-/*body*/
+/*body1*/
 span {
   color: grey;
   font-size: 0.9em;
@@ -77,9 +77,9 @@ a {
 }
 
 h1 {
-  font-size: 25px;
+  font-size: 1.2em;
+  line-height: 1.3;
   text-align: left;
-  line-height: 28px;
   font-weight: normal;
 }
 
@@ -127,10 +127,9 @@ p {
   text-decoration: underline;
 }
 
-/*index.html boxes*/
-#box1 {
-  margin-top: -10px;
-  width: fit-content;
+/*body2*/
+#black {
+  color: white;
 }
 
 /*AUDIO PLAYER*/
@@ -147,35 +146,46 @@ padding-left: 0%;
 padding-right: 0%;
 }
 
+audio::-webkit-media-controls-play-button-hover {
+  display: none!important;
+}
+
 audio::-webkit-media-controls-timeline-container{
   display: none !important;
-  
 }
 
 audio::-webkit-media-controls-timeline{
-  display: none !important;
-  margin-right: 100px;
-  padding-right: 50px;
+  display: none!important;
+  pointer-events: none;
 }
 
 audio::-webkit-media-controls-volume-slider-container {
-  display: none !important;
+  display: none!important;
 }
 
 audio::-webkit-media-controls-volume-slider {
-  display: none !important;
-  margin-right: 100px;
-  padding-right: 50px;
+  display: none!important;
+}
+
+audio::-webkit-media-controls-volume-control-hover-background {
+  display: none!important;
+}
+
+audio::-webkit-media-controls-volume-control-hover-background {
+  display: none!important;
+}
+
+audio::-webkit-media-controls-volume-control-container { 
+  display: none; 
 }
 
 audio::-webkit-media-controls-mute-button {
-  display: none !important;
-  margin-right: 100px;
-  padding-right: 50px;
+  display: none!important;
 }
 
+
 audio::-webkit-media-controls-time-remaining-display {
-  display: none !important;
+  display: none!important;
 }
 
 /*GRIGLIA IMMAGINI*/
@@ -184,13 +194,16 @@ audio::-webkit-media-controls-time-remaining-display {
   grid: auto / 22% 22% 22% 22%;
   grid-column-gap: 4%;
   grid-row-gap: 4%;
+  row-gap: 15px;
   width: 100%;
 }
 
+
 .grid-container > .grid-item{
-  column-gap: 25px;
-  row-gap: 25px;
+  column-gap: 20px;
+  row-gap: 20px;
 }
+
 .grid-item > figure {
   margin: 0px;
 }
@@ -198,7 +211,15 @@ audio::-webkit-media-controls-time-remaining-display {
 .grid-item > figure > img {
   width: 100%;
   -webkit-filter: grayscale(1);
+  margin-top: 0px;
 }
+
+.grid-item > figure > img:first-child {
+  width: 100%;
+  -webkit-filter: grayscale(1);
+  margin-top: 10px;
+}
+
 
 .grid-item > figure > img:hover {
   width: 100%;
@@ -213,12 +234,13 @@ audio::-webkit-media-controls-time-remaining-display {
   grid: auto / 22% 22% 22% 22%;
   grid-column-gap: 4%;
   grid-row-gap: 4%;
+  row-gap: 15px;
   width: 100%;
 }
 
 .grid-container1 > .grid-item1{
-  column-gap: 25px;
-  row-gap: 25px;
+  column-gap: 20px;
+  row-gap: 20px;
 }
 
 .grid-item1 {
@@ -236,13 +258,21 @@ audio::-webkit-media-controls-time-remaining-display {
 }
 
 .grid-container2 > .grid-item1{
-  column-gap: 25px;
-  row-gap: 25px;
+  column-gap: 20px;
+  row-gap: 20px;
 }
 
 .grid-item2 {
   margin: 0px;
   width: 100%;
+}
+
+.box {
+ width: 74%;
+}
+
+.borderTop {
+  border-top: 0.7px solid white;
 }
 
 /*makes things responsive*/
@@ -253,6 +283,7 @@ audio::-webkit-media-controls-time-remaining-display {
     grid: auto / 47.5% 47.5%;
     grid-column-gap: 5%;
     grid-row-gap: 5%;
+    row-gap: 15px;
     width: 100%;
   }
 
@@ -261,8 +292,13 @@ audio::-webkit-media-controls-time-remaining-display {
     grid: auto / 47.5% 47.5%;
     grid-column-gap: 5%;
     grid-row-gap: 5%;
+    row-gap: 15px;
     width: 100%;
   }
+
+  .box {
+    width: 100%;
+   }
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -270,16 +306,22 @@ audio::-webkit-media-controls-time-remaining-display {
   .grid-container {
     display: inline-grid;
     grid: auto / 100%;
-    grid-column-gap: 0%;
+    grid-column-gap: 5%;
     grid-row-gap: 5%;
+    row-gap: 15px;
     width: 100%;
   }
 
   .grid-container1 {
     display: inline-grid;
     grid: auto / 100%;
-    grid-column-gap: 0%;
+    grid-column-gap: 5%;
     grid-row-gap: 5%;
+    row-gap: 15px;
     width: 100%;
   }
+
+  .box {
+    width: 100%;
+   }
 }
