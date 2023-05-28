@@ -14,6 +14,9 @@
     <script src="libraries/p5.sound.js"></script>
     <script src="sketch.js"></script>
     <script src="script.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="aud-player.css">
+    <script defer src="aud-player.js"></script>
   </head>
 
   <body style="background-color: white;">
@@ -44,7 +47,7 @@
           <h3>View generated song's specification</h3>
         </div>
 
-        <div style="display:none">
+        <div id="box1" style="display:none">
           <p>Selected song: <br><span id="inputSongValue"></span> 
           </br> Length of each segment (ms): <br><span id="segmentLengthValue"></span>
           </br> Number of segments: <br><span id="segmentsValue"></span></p>
@@ -58,38 +61,21 @@
 
         <div class="grid-container2">
           <div class="grid-item2, test">
-            <a>Andrea:</a>
-            <a>Matteo:</a>
-            <a>MariaG:</a>
-            <a>Alice:</a>
-            <a>Fra:</a>
-            <a>Marina:</a>
+            <a class="alink">Andrea:</a>
+            <a class="alink">Matteo:</a>
+            <a class="alink">MariaG:</a>
+            <a class="alink">Alice:</a>
+            <a class="alink">Fra:</a>
+            <a class="alink">Marina:</a>
           </div>
 
           <div class="grid-item2">
-            <audio controls>
-              <source src="database/1.wav" type="audio/wav">
-            </audio>
-
-            <audio controls>
-              <source src="database/2.wav" type="audio/wav">
-            </audio>
-
-            <audio controls>
-              <source src="database/3.wav" type="audio/wav">
-            </audio>
-
-            <audio controls>
-              <source src="database/4.wav" type="audio/wav">
-            </audio>
-
-            <audio controls>
-              <source src="database/5.wav" type="audio/wav">
-            </audio>
-
-            <audio controls>
-              <source src="database/5.wav" type="audio/wav">
-            </audio>
+            <div class="aWrap" data-src="database/5.wav"></div>
+            <div class="aWrap" data-src="database/5.wav"></div>
+            <div class="aWrap" data-src="database/5.wav"></div>
+            <div class="aWrap" data-src="database/5.wav"></div>
+            <div class="aWrap" data-src="database/5.wav"></div>
+            <div class="aWrap" data-src="database/5.wav"></div>
           </div>
         </div>
         
@@ -105,7 +91,7 @@
         <span id="playlist"></span> 
         <script src="playlistGen.js"></script>
         <br>
-        <a class="aLink" href="secondary.html">Visit NoWave music archive ></a>
+        <a class="aLink" href="/secondary.html#musicSection">Visit NoWave music archive ></a>
       </div>
 
     </div>

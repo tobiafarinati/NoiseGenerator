@@ -14,6 +14,12 @@ html, body {
   display: flex;
 }
 
+.test1 {
+  flex-direction: column;
+  display: flex;
+  margin-bottom: 15px;
+}
+
 .headerActive1 {
   color: #000000;
   font-size: 1.2em;
@@ -71,6 +77,13 @@ span {
 
 a {
   color: black;
+  text-decoration: none;
+  font-size: 0.9em;
+  line-height: 1.3;
+}
+
+.aWhite {
+  color: white;
   text-decoration: none;
   font-size: 0.9em;
   line-height: 1.3;
@@ -135,7 +148,7 @@ p {
 /*AUDIO PLAYER*/
 audio {
   width: 100%;
-  height: 20px;
+  height: 17px;
   margin-top: -5px;
   margin-bottom: -6px;
 }
@@ -144,10 +157,6 @@ audio::-webkit-media-controls-panel {
 background-color: white;
 padding-left: 0%;
 padding-right: 0%;
-}
-
-audio::-webkit-media-controls-play-button-hover {
-  display: none!important;
 }
 
 audio::-webkit-media-controls-timeline-container{
@@ -241,6 +250,7 @@ audio::-webkit-media-controls-time-remaining-display {
 .grid-container1 > .grid-item1{
   column-gap: 20px;
   row-gap: 20px;
+  border-top: 0px solid black;
 }
 
 .grid-item1 {
@@ -265,6 +275,50 @@ audio::-webkit-media-controls-time-remaining-display {
 .grid-item2 {
   margin: 0px;
   width: 100%;
+}
+
+/*GRID MUSIC*/
+.grid-container3 {
+  display: inline-grid;
+  grid: auto / 22% 73%;
+  grid-column-gap: 4%;
+  grid-row-gap: 4%;
+  row-gap: 15px;
+  width: 100%;
+}
+
+
+.grid-container3 > .grid-item{
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+.grid-item3 > figure {
+  margin: 0px;
+}
+
+.grid-item3 > figure > img {
+  width: 170px;
+  -webkit-filter: grayscale(1);
+  margin-top: 0px;
+}
+
+.grid-item3 > figure > img:first-child {
+  width: 170px;
+  -webkit-filter: grayscale(1);
+  margin-top: 0px;
+}
+
+
+.grid-item3 > figure > img:hover {
+  width: 170px;
+  -webkit-filter: none;
+}
+
+/*BOXES*/
+#box1 {
+  width: auto;
+  margin-top: -10px;
 }
 
 .box {
@@ -296,6 +350,20 @@ audio::-webkit-media-controls-time-remaining-display {
     width: 100%;
   }
 
+  .grid-container3 {
+    display: inline-grid;
+    grid: auto / 100%;
+    grid-column-gap: 5%;
+    grid-row-gap: 5%;
+    width: 100%;
+  }
+
+  .test1 {
+    flex-direction: column;
+    display: flex;
+    margin-bottom: 40px;
+  }
+
   .box {
     width: 100%;
    }
@@ -319,6 +387,18 @@ audio::-webkit-media-controls-time-remaining-display {
     grid-row-gap: 5%;
     row-gap: 15px;
     width: 100%;
+  }
+
+  .grid-container1 > .grid-item1{
+    column-gap: 20px;
+    row-gap: 20px;
+    border-top: 0.8px solid black;
+  }
+
+  .test1 {
+    flex-direction: column;
+    display: flex;
+    margin-bottom: 40px;
   }
 
   .box {

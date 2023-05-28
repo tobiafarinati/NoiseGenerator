@@ -1,0 +1,105 @@
+span {
+  color: grey;
+  font-size: 0.9em;
+  line-height: 1.3;
+}
+
+/* (A) MATERIAL ICONS */
+.material-icons {
+  font-size: 0.9em;
+  line-height: 1.3;
+  color:black;
+}
+
+.aNow {
+  color: grey;
+  margin-right: 2px;
+}
+
+.aTime {
+  color: grey;
+  margin-left: 2px;
+}
+
+/* (B) WRAPPER */
+.aWrap {
+  font-family: Helvetica;
+  display: flex;
+  align-items: left;
+  /* allow buttons to wrap into another row on small screens */
+  /* flex-wrap: wrap; */
+  max-width: 100%;
+  padding: 0px;
+  margin-top: 0px;
+  border-radius: 0px;
+  font-size: 0.9em;
+  line-height: 1.3;
+}
+.aWrap, .aWrap * { 
+box-sizing: border-box; 
+}
+
+/* (C) PLAY/PAUSE BUTTON */
+.aPlay {
+  color: black;
+  padding: 0;
+  margin: 0;
+  background: 0;
+  border: 0;
+  cursor: pointer;
+}
+
+/* (D) TIME */
+.aCron {
+  display: flex;
+  flex-direction: row;
+  font-size: 1.1em;
+  line-height: 1.185;
+  color: black;
+  margin: 0 10px;
+
+}
+
+/* (E) RANGE SLIDERS */
+/* (E1) HIDE DEFAULT */
+.aWrap input[type="range"] {
+  appearance: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  width: 150px;
+  padding: 0;
+  margin: 0;
+  background: 0;
+}
+.aWrap input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+}
+
+/* (E2) CUSTOM SLIDER TRACK */
+.aWrap input[type=range]::-webkit-slider-runnable-track {
+  background: none;
+}
+.aWrap input[type=range]::-moz-range-track {
+  background: none;
+}
+
+/* (E3) CUSTOM SLIDER BUTTON */
+.aWrap input[type=range]::-webkit-slider-thumb {
+  width: 16px; height: 16px;
+  border-radius: 50%;
+  border: 0;
+  background: #fff;
+}
+.aWrap input[type=range]::-moz-range-thumb {
+  width: 16px; height: 16px;
+  border-radius: 50%;
+  border: 0;
+  background: #fff;
+}
+
+/* (F) VOLUME */
+.aVolIco {
+  margin: 0 10px;
+  cursor: pointer;
+}
