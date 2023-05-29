@@ -9,7 +9,7 @@ let patterns = [];
 let audioContext;
 
 function preload() {
-  let audioFiles = ['song/02ContortYourself.mp3', 'song/03YouGotMe.mp3'];
+  let audioFiles = ['song/3E.mp3', 'song/Baby Dee.mp3', 'song/Breakfast.mp3', 'song/Bye Bye Bayou.mp3', 'song/Can-t Be Funky.mp3', 'song/Clean On Your Bean #1.mp3', 'song/Contort Yourself.mp3', 'song/Do Dada.mp3', 'song/Elephant.mp3', 'song/Helen Fordsdale.mp3', 'song/Pini, Pini.mp3', 'song/Reduction.mp3', 'song/Son of Sam.mp3', 'song/Too Many Creeps.mp3', 'song/Wawa.mp3', 'song/You Got Me.mp3',];
   
   // Select a random audio file from the list
   let randomIndex = Math.floor(Math.random() * audioFiles.length);
